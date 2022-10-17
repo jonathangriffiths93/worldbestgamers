@@ -1,0 +1,140 @@
+* {
+    padding: 0;
+    margin: 10;
+}
+
+body {
+    background-color: rgb(75, 2, 107);
+    background-image: url(./Assets/FONDO.png);
+    background-repeat: repeat;
+    color: whitesmoke;
+    font-family: 'Gemunu Libre', "ocr a";
+}
+
+header {
+    background-color: darkorchid;
+    padding: 20px;
+    margin: 0px 10px 0px 10px;
+    
+}
+
+h1 {
+    font-size: 80px;
+    margin-top: 0;
+    margin-bottom: 0;
+    
+}
+
+.menu-superior {
+    font-size: 30px;
+    display: flex;
+    flex-flow: wrap row;
+    align-content: space-between;
+    justify-content: space-around;
+    background: rgba(147, 5, 69, 0.341);
+    border-color: greenyellow;
+    border-width:  5px;
+    border-radius: 5px;
+    border-style: solid;
+    line-height: 50px;
+}
+
+
+.menu-inferior {
+    font-size: 20px;
+    display: flex;
+    flex-flow: wrap row;
+    align-content: space-between;
+    justify-content: space-around;
+    background: rgba(147, 5, 69, 0.341);
+    border-color: rgb(249, 28, 161);
+    border-width:  5px;
+    border-radius: 5px;
+    border-style: solid;
+    line-height: 50px;
+}
+
+a:link {
+    text-decoration: none;
+    color: whitesmoke;
+}
+a:visited {
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+a:hover {
+    color: greenyellow;
+}
+
+#form-login {
+    position: absolute;
+    left: 950px;
+    
+}
+#form-buscar {
+    position: absolute;
+    left: 1130px;
+    top: 130px;
+}
+
+.card {
+    background-color: rgb(45, 67, 67);
+    margin: 20px;
+    padding: 10px;
+    box-sizing: border-box;
+    max-width: 60%;
+    overflow: auto;
+}
+
+.card__title {
+    color:rgb(124, 255, 98)
+}
+.card__img {
+position: relative;
+border:rgb(75, 2, 107);
+
+}
+
+.card__videos {
+    position: absolute;
+    left: 62%;
+    background-color: rgb(45, 67, 67);
+    margin: 20px;
+    padding: 10px;
+    height: 200%;
+    width: 35%;
+    box-sizing: border-box;
+    max-width: 50%;
+    overflow: auto;
+}
+
+/*camino de migajas */
+ul.breadcrumb {
+    padding: 10px 16px;
+    list-style: none;
+    background-color: rgb(98, 21, 81);
+  }
+  
+  /* para ver los items listados lado a lado*/
+  ul.breadcrumb li {
+    display: inline;
+    font-size: 18px;
+  }
+  
+  ul.breadcrumb li+li:before {
+    padding: 8px;
+    color: rgb(248, 244, 244);
+    content: "/\00a0";
+  }
+  
+  ul.breadcrumb li a {
+    color: #0275d8;
+    text-decoration: none;
+  }
+  
+  ul.breadcrumb li a:hover {
+    color: #01447e;
+    text-decoration: underline;
+  }
+
