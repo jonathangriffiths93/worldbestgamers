@@ -19,10 +19,45 @@ header {
 }
 
 h1 {
-    font-size: 80px;
-    margin-top: 0;
-    margin-bottom: 0;
-    
+    text-shadow: 3px 3px black;
+    display: flex;
+    justify-content: flex-start;
+    position: relative;
+    font-size: 80px;    
+}
+
+h2 {
+    text-shadow: 3px 3px black;
+}
+
+.portadawbg {
+    margin: 10px 30px 10px 30px;
+    min-height: 20%;
+    max-height: 50%;
+    max-width: 100%;
+    position: relative;
+}
+
+.titulowbg {
+        position: absolute;
+        top: 70%;
+        left: 25%;
+        transform: translate(-50%, -50%);
+}
+
+.form-login {
+    display: flex;
+    align-items: flex-end;
+    position: relative;
+}
+
+
+.carousel-size {
+    margin: 10px 30px 10px 30px;
+    min-height: 20%;
+    max-height: 50%;
+    max-width: 100%;
+    position: relative;
 }
 
 .menu-superior {
@@ -42,10 +77,6 @@ h1 {
 
 .menu-inferior {
     font-size: 20px;
-    display: flex;
-    flex-flow: wrap row;
-    align-content: space-between;
-    justify-content: space-around;
     background: rgba(147, 5, 69, 0.341);
     border-color: rgb(249, 28, 161);
     border-width:  5px;
@@ -67,16 +98,12 @@ a:hover {
     color: greenyellow;
 }
 
-#form-login {
-    position: absolute;
-    left: 950px;
-    
+.boton-buscar {
+    color: greenyellow;
+    background-color: rgb(65, 37, 65);
 }
-#form-buscar {
-    position: absolute;
-    left: 1130px;
-    top: 130px;
-}
+
+
 
 .card {
     background-color: rgb(45, 67, 67);
@@ -93,6 +120,7 @@ a:hover {
 .card__img {
 position: relative;
 border:rgb(75, 2, 107);
+max-width: 100%;
 
 }
 
@@ -108,7 +136,6 @@ border:rgb(75, 2, 107);
     max-width: 50%;
     overflow: auto;
 }
-
 /*camino de migajas */
 ul.breadcrumb {
     padding: 10px 16px;
