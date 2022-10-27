@@ -14,20 +14,44 @@ body {
 main {
     display: grid;
     grid-template-columns: 60% 40%;
+    grid-template-rows: auto auto auto auto;
     grid-template-areas:
-    "article aside"
-    "article aside"
-    "article";
-    grid-template-rows: 30 30% 30%;
-    
+        "article aside"
+        "article aside"
+        "article aside"
+        "article aside";
+}
+
+aside {
+    grid-area: aside;
 }
 
 
-@media (max-width: 1000px) {
+@media (min-width: 890px) and (max-width: 1100px) {
     main {
         grid-template-columns: 100%;
+        grid-template-rows: auto auto auto auto auto auto auto;
+        grid-template-areas:
+            "article "
+            "article "
+            "article "
+            "article "
+            "aside";
     }
 }
+
+@media (min-width: 400px) and (max-width: 889px) {
+    main {
+        grid-template-columns: 60% 40%;
+        grid-template-rows: auto auto;
+        grid-template-areas:
+            "article aside"
+            "article aside"
+            "article aside"
+            "article aside";
+    }
+}
+
 
 header {
     display: grid;
@@ -35,7 +59,7 @@ header {
     background-color: darkorchid;
     padding: 20px;
     margin: 0px 10px 0px 10px;
-    
+
 }
 
 h1 {
@@ -43,7 +67,7 @@ h1 {
     display: flex;
     justify-content: flex-start;
     position: relative;
-    font-size: 80px;    
+    font-size: 80px;
 }
 
 h2 {
@@ -55,16 +79,16 @@ h2 {
 }
 
 .titulowbg {
-        position: initial;
-        top: 70%;
-        left: 25%;
-        transform: translate(-50%, -50%);
+    position: initial;
+    top: 70%;
+    left: 25%;
+    transform: translate(-50%, -50%);
 }
 
 .form-login {
     background: rgba(147, 5, 69, 0.100);
     border-color: greenyellow;
-    
+
 }
 
 .banner {
@@ -83,49 +107,93 @@ h2 {
     animation: banner 30s infinite;
 }
 
-    @keyframes banner {
-        6%, 30% {
-            background-image: url(./Assets/Portada4.png);
-            opacity: 1;
-        }
-        31%, 34% {
-            opacity: 0.9;
-        }
-        35%, 65% {
-            background-image: url(./Assets/Portada5.png);
-            opacity: 1;
-        }
-        66%, 69% {
-            opacity: 0.9;
-        }
-        70%, 100% {
-            background-image: url(./Assets/Portada6.png);
-            opacity: 1;
-        }
-        0%, 5% {
-            opacity: 0.9;
-}
+@keyframes banner {
+
+    6%,
+    30% {
+        background-image: url(./Assets/Portada4.png);
+        opacity: 1;
     }
 
-@media (min-width: 700px) and (max-width: 1448px) {
-    .banner {
-    height: 200px;
-}
+    31%,
+    34% {
+        opacity: 0.9;
+    }
+
+    35%,
+    65% {
+        background-image: url(./Assets/Portada5.png);
+        opacity: 1;
+    }
+
+    66%,
+    69% {
+        opacity: 0.9;
+    }
+
+    70%,
+    100% {
+        background-image: url(./Assets/Portada6.png);
+        opacity: 1;
+    }
+
+    0%,
+    5% {
+        opacity: 0.9;
+    }
 }
 
-@media (min-width: 400px) and (max-width: 700px) {
+@media (min-width: 1010px) {
     .banner {
-    height: 10px;
+        height: 500px;
+    }
 }
+
+@media (min-width: 700px) and (max-width: 1010px) {
+    .banner {
+        height: 300px;
+    }
 }
-   
-    
+
+@media (min-width: 400px) and (max-width: 699px) {
+    .banner {
+        height: 10px;
+    }
+}
+
+
 .carousel-size {
     margin: auto;
     max-width: 90%;
+    max-height: 700px;
     position: static;
-    overflow-block: inherit;
 }
+
+.carousel-text {
+    font-size: xx-large;
+    text-shadow: 3px 3px black;
+    text-align: auto;
+    top: 30rem;
+
+}
+
+@media (min-width: 890px) and (max-width: 1100px) {
+    .carousel-text {
+        text-align: auto;
+        top: 20rem;
+    }
+
+}
+
+@media (min-width: 300px) and (max-width: 879px) {
+    .carousel-text {
+        font-size: 100%;
+        text-align: center;
+        top: 11rem;
+    }
+
+}
+
 
 .menu-superior {
     font-size: 2rem;
@@ -134,7 +202,7 @@ h2 {
 
     background: rgba(147, 5, 69, 0.341);
     border-color: greenyellow;
-    border-width:  5px;
+    border-width: 5px;
     border-radius: 5px;
     border-style: solid;
     line-height: 50px;
@@ -145,23 +213,24 @@ h2 {
     font-size: 2rem;
     background: rgba(147, 5, 69, 0.341);
     border-color: rgb(249, 28, 161);
-    border-width:  5px;
+    border-width: 5px;
     border-radius: 5px;
     border-style: solid;
-    line-height: 50px;
+    line-height:normal 50px;
 }
 
 
 @media (min-width: 993px) and (max-width: 1448px) {
     .menu-superior {
-    font-size: 20px;
-}
+        font-size: 20px;
+    }
 }
 
 a:link {
     text-decoration: none;
     color: whitesmoke;
 }
+
 a:visited {
     text-decoration: none;
     color: whitesmoke;
@@ -185,69 +254,83 @@ a:hover {
     box-sizing: border-box;
     height: fit-content;
     overflow: auto;
-    
+
+}
+
+.card-twitch {
+    background-color: rgb(45, 67, 67);
+    margin: 20px;
+    padding: 40px;
+    box-sizing: border-box;
+    height: 50rem;
+    overflow: auto;
+
 }
 
 .card__title {
-    color:rgb(124, 255, 98)
+    color: rgb(124, 255, 98)
 }
+
 .card__img {
     position: relative;
-    border:rgb(75, 2, 107);
+    border: rgb(75, 2, 107);
     max-width: 100%;
 
 }
 
 .card__videos {
+
     background-color: rgb(45, 67, 67);
     margin: 20px;
     padding: 20px 10px 30px 10px;
     box-sizing: border-box;
+    height: fit-content;
     overflow: auto;
 }
+
 /*camino de migajas */
 ul.breadcrumb {
     padding: 10px 16px;
     list-style: none;
     background-color: rgb(98, 21, 81);
-  }
-  
-  /* para ver los items listados lado a lado*/
-  ul.breadcrumb li {
+}
+
+/* para ver los items listados lado a lado*/
+ul.breadcrumb li {
     display: inline;
     font-size: 18px;
-  }
-  
-  ul.breadcrumb li+li:before {
+}
+
+ul.breadcrumb li+li:before {
     padding: 8px;
     color: rgb(248, 244, 244);
     content: "/\00a0";
-  }
-  
-  ul.breadcrumb li a {
+}
+
+ul.breadcrumb li a {
     color: #0275d8;
     text-decoration: none;
-  }
-  
-  ul.breadcrumb li a:hover {
+}
+
+ul.breadcrumb li a:hover {
     color: #01447e;
     text-decoration: underline;
-  }
+}
 
- footer {
+footer {
     width: 100%;
     margin-top: 50px;
     background-color: darkslategrey;
-  }
+}
 
-  .buttons {
+.buttons {
     min-width: 700px;
     display: flex;
     justify-content: space-evenly;
     padding: 10px;
-  }
-  
-  .buttons a {
+}
+
+.buttons a {
     text-decoration: none;
     font-size: 28px;
     width: 60px;
@@ -259,9 +342,14 @@ ul.breadcrumb {
     border-radius: 50%;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, .5);
     transition: all .4s ease-in-out;
-  }
-  
-  .buttons a:hover {
+}
+
+.buttons a:hover {
     transform: scale(1.2);
-  }
- 
+}
+
+#twitch-embed {
+    height: 500px;
+    width: 900px;
+    
+}
