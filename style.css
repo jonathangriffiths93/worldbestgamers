@@ -11,7 +11,27 @@ body {
     font-family: 'Gemunu Libre', "ocr a";
 }
 
+main {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    grid-template-areas:
+    "article aside"
+    "article aside"
+    "article";
+    grid-template-rows: 30 30% 30%;
+    
+}
+
+
+@media (max-width: 1000px) {
+    main {
+        grid-template-columns: 100%;
+    }
+}
+
 header {
+    display: grid;
+    grid-template-columns: 100%;
     background-color: darkorchid;
     padding: 20px;
     margin: 0px 10px 0px 10px;
@@ -31,41 +51,87 @@ h2 {
 }
 
 .portadawbg {
-    margin: 10px 30px 10px 30px;
-    min-height: 20%;
-    max-height: 50%;
-    max-width: 100%;
-    position: relative;
+    background-image: url(./Assets/PORTADA.png);
 }
 
 .titulowbg {
-        position: absolute;
+        position: initial;
         top: 70%;
         left: 25%;
         transform: translate(-50%, -50%);
 }
 
 .form-login {
-    display: flex;
-    align-items: flex-end;
-    position: relative;
+    background: rgba(147, 5, 69, 0.100);
+    border-color: greenyellow;
+    
 }
 
-
-.carousel-size {
-    margin: 10px 30px 10px 30px;
-    min-height: 20%;
-    max-height: 50%;
+.banner {
+    width: 100%;
+    height: 450px;
+    min-width: 200px;
     max-width: 100%;
-    position: relative;
+    min-height: 200px;
+    max-height: 450px;
+    border: 3px solid darkorchid;
+    margin: auto;
+
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+
+    animation: banner 30s infinite;
+}
+
+    @keyframes banner {
+        6%, 30% {
+            background-image: url(./Assets/Portada4.png);
+            opacity: 1;
+        }
+        31%, 34% {
+            opacity: 0.9;
+        }
+        35%, 65% {
+            background-image: url(./Assets/Portada5.png);
+            opacity: 1;
+        }
+        66%, 69% {
+            opacity: 0.9;
+        }
+        70%, 100% {
+            background-image: url(./Assets/Portada6.png);
+            opacity: 1;
+        }
+        0%, 5% {
+            opacity: 0.9;
+}
+    }
+
+@media (min-width: 700px) and (max-width: 1448px) {
+    .banner {
+    height: 200px;
+}
+}
+
+@media (min-width: 400px) and (max-width: 700px) {
+    .banner {
+    height: 10px;
+}
+}
+   
+    
+.carousel-size {
+    margin: auto;
+    max-width: 90%;
+    position: static;
+    overflow-block: inherit;
 }
 
 .menu-superior {
-    font-size: 30px;
+    font-size: 2rem;
     display: flex;
     flex-flow: wrap row;
-    align-content: space-between;
-    justify-content: space-around;
+
     background: rgba(147, 5, 69, 0.341);
     border-color: greenyellow;
     border-width:  5px;
@@ -76,13 +142,20 @@ h2 {
 
 
 .menu-inferior {
-    font-size: 20px;
+    font-size: 2rem;
     background: rgba(147, 5, 69, 0.341);
     border-color: rgb(249, 28, 161);
     border-width:  5px;
     border-radius: 5px;
     border-style: solid;
     line-height: 50px;
+}
+
+
+@media (min-width: 993px) and (max-width: 1448px) {
+    .menu-superior {
+    font-size: 20px;
+}
 }
 
 a:link {
@@ -108,32 +181,28 @@ a:hover {
 .card {
     background-color: rgb(45, 67, 67);
     margin: 20px;
-    padding: 10px;
+    padding: 20px 10px 30px 10px;
     box-sizing: border-box;
-    max-width: 60%;
+    height: fit-content;
     overflow: auto;
+    
 }
 
 .card__title {
     color:rgb(124, 255, 98)
 }
 .card__img {
-position: relative;
-border:rgb(75, 2, 107);
-max-width: 100%;
+    position: relative;
+    border:rgb(75, 2, 107);
+    max-width: 100%;
 
 }
 
 .card__videos {
-    position: absolute;
-    left: 62%;
     background-color: rgb(45, 67, 67);
     margin: 20px;
-    padding: 10px;
-    height: 200%;
-    width: 35%;
+    padding: 20px 10px 30px 10px;
     box-sizing: border-box;
-    max-width: 50%;
     overflow: auto;
 }
 /*camino de migajas */
@@ -170,3 +239,29 @@ ul.breadcrumb {
     margin-top: 50px;
     background-color: darkslategrey;
   }
+
+  .buttons {
+    min-width: 700px;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 10px;
+  }
+  
+  .buttons a {
+    text-decoration: none;
+    font-size: 28px;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    background: #52314a;
+    color: #f1f1f1;
+    border-radius: 50%;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, .5);
+    transition: all .4s ease-in-out;
+  }
+  
+  .buttons a:hover {
+    transform: scale(1.2);
+  }
+ 
