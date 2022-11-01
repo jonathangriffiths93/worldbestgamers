@@ -59,15 +59,16 @@ header {
     background-color: darkorchid;
     padding: 20px;
     margin: 0px 10px 0px 10px;
+    position: relative;
 
 }
 
 h1 {
     text-shadow: 3px 3px black;
-    display: flex;
-    justify-content: flex-start;
-    position: relative;
     font-size: 80px;
+    position: absolute;
+    padding: 20px;
+    top: 60%;
 }
 
 h2 {
