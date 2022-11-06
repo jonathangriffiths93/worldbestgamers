@@ -1,4 +1,5 @@
 * {
+    
     padding: 0;
     margin: 10;
 }
@@ -27,7 +28,7 @@ aside {
 }
 
 
-@media (min-width: 890px) and (max-width: 1100px) {
+@media (min-width: 01px) and (max-width: 1100px) {
     main {
         grid-template-columns: 100%;
         grid-template-rows: auto auto auto auto auto auto auto;
@@ -40,7 +41,7 @@ aside {
     }
 }
 
-@media (min-width: 400px) and (max-width: 889px) {
+@media (min-width: 50%) and (max-width: 200%) {
     main {
         grid-template-columns: 60% 40%;
         grid-template-rows: auto auto;
@@ -65,10 +66,10 @@ header {
 
 h1 {
     text-shadow: 3px 3px black;
-    font-size: 80px;
+    font-size: 1 rem;
     position: absolute;
     padding: 20px;
-    top: 60%;
+    bottom: 22%;
 }
 
 h2 {
@@ -94,11 +95,11 @@ h2 {
 
 .banner {
     width: 100%;
-    height: 450px;
-    min-width: 200px;
+    height: 100%;
+    min-width: 70%;
     max-width: 100%;
-    min-height: 200px;
-    max-height: 450px;
+    min-height: 15rem;
+    max-height: 101%;
     border: 3px solid darkorchid;
     margin: auto;
 
@@ -144,21 +145,21 @@ h2 {
     }
 }
 
-@media (min-width: 1010px) {
+@media (min-width: 1000px) {
     .banner {
         height: 500px;
     }
 }
 
-@media (min-width: 700px) and (max-width: 1010px) {
+@media (min-width: 31%) and (max-width: 70%) {
     .banner {
-        height: 300px;
+        height: 15rem;
     }
 }
 
-@media (min-width: 400px) and (max-width: 699px) {
+@media (min-width: 1px) and (max-width: 30%) {
     .banner {
-        height: 10px;
+        height: 5rem;
     }
 }
 
