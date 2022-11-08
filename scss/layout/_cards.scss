@@ -1,11 +1,14 @@
-.card {
-    background-color: rgb(45, 67, 67);
+@mixin cajacards{
+    background-color: $fondocajas;
     margin: 20px;
     padding: $paddingcards;
     box-sizing: border-box;
     box-shadow: $sombradebajo;
     height: fit-content;
     overflow: auto;
+}
+.card {
+    @include: "cajacards";
     
 
     &__title {
@@ -21,22 +24,12 @@
 
     &__videos {
 
-        background-color: rgb(45, 67, 67);
-        margin: 10px;
-        padding: $paddingcards;
-        box-sizing: border-box;
-        height: fit-content;
-        overflow: auto;
+        @include: "cajacards(margin: 10px;)";
+        
+        
     }
 }
 
 .card-twitch {
-    background-color: rgb(45, 67, 67);
-    box-shadow: $sombradebajo;
-    margin: 20px;
-    padding: 40px;
-    box-sizing: border-box;
-    height: 50rem;
-    overflow: auto;
-
+    @include: "cajacards(margin: 10px; padding: 40px; height: 50rem;)";
 }
