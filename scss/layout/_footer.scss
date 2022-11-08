@@ -1,0 +1,32 @@
+footer {
+    width: 100%;
+    margin-top: 50px;
+    background-color: darkslategrey;
+
+    .footer {
+        &-buttons {
+            min-width: 700px;
+            display: flex;
+            justify-content: space-evenly;
+            padding: 10px;
+
+            a {
+                text-decoration: none;
+                font-size: 28px;
+                width: 60px;
+                height: 60px;
+                line-height: 60px;
+                text-align: center;
+                background: #52314a;
+                color: $textoblanco;
+                border-radius: 50%;
+                box-shadow: $sombradebajo;
+                transition: all .4s ease-in-out;
+
+                &:hover {
+                    transform: scale(1.2);
+                }
+            }
+        }
+    }
+}

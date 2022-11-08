@@ -1,0 +1,87 @@
+
+
+header {
+    display: grid;
+    grid-template-columns: 100%;
+    background-color: darkorchid;
+    padding: 20px;
+    margin: 0px 10px 0px 10px;
+    position: relative;
+
+    h1 {
+        text-shadow: 3px 3px black;
+        font-size: 1 rem;
+        position: absolute;
+        padding: 20px;
+        bottom: 22%;
+    }
+
+}
+
+
+
+.titulowbg {
+    position: initial;
+    top: 70%;
+    left: 25%;
+    transform: translate(-50%, -50%);
+}
+
+.banner {
+    width: 100%;
+    height: 100%;
+    min-width: 70%;
+    max-width: 100%;
+    min-height: 15rem;
+    max-height: 101%;
+    border: 3px solid darkorchid;
+    margin: auto;
+
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+
+    animation: banner 30s infinite;
+    .portadawbg {
+        background-image: url("/Assets/PORTADA.png");
+    }
+}
+
+
+
+@keyframes banner {
+
+    0%,
+    30% {
+        background-image: url("/Assets/Portada4.png");
+        opacity: 1;
+    }
+
+    31%,
+    34% {
+        opacity: 0.9;
+    }
+
+    35%,
+    65% {
+        background-image: url("/Assets/Portada5.png");
+        opacity: 1;
+    }
+
+    66%,
+    69% {
+        opacity: 0.9;
+    }
+
+    70%,
+    100% {
+        background-image: url("/Assets/Portada6.png");
+        opacity: 1;
+    }
+
+    101%,
+    105% {
+        opacity: 0.9;
+    }
+}
+
+

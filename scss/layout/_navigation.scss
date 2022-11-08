@@ -1,0 +1,43 @@
+
+
+/*barra de menu*/
+.menu-superior {
+    font-size: 2rem;
+    display: flex;
+    flex-flow: wrap row;
+
+    background: rgba(147, 5, 69, 0.341);
+    border-color: greenyellow;
+    border-width: 5px;
+    border-radius: 5px;
+    border-style: solid;
+    line-height: 50px;
+}
+
+/*desplegable*/
+.menu-inferior {
+    font-size: 2rem;
+    background: rgba(147, 5, 69, 0.341);
+    border-color: rgb(249, 28, 161);
+    border-width: 5px;
+    border-radius: 5px;
+    border-style: solid;
+    line-height:normal 50px;
+}
+
+
+
+
+
+/*busqueda*/
+.boton-buscar {
+    color: $hoverlinks;
+    background-color: rgb(65, 37, 65);
+}
+
+/*login*/
+.form-login {
+    background: rgba(147, 5, 69, 0.100);
+    border-color: greenyellow;
+
+}
