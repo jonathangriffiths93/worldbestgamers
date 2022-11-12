@@ -5,17 +5,17 @@ footer {
 
     .footer {
         &-buttons {
-            min-width: 700px;
+            min-width: 100%;
             display: flex;
-            justify-content: space-evenly;
+            justify-content: center;
             padding: 10px;
 
             a {
                 text-decoration: none;
-                font-size: 28px;
-                width: 60px;
-                height: 60px;
-                line-height: 60px;
+                font-size: 28rem;
+                width: 60rem;
+                height: 60rem;
+                line-height: 60rem;
                 text-align: center;
                 background: #52314a;
                 color: $textoblanco;

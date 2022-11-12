@@ -251,17 +251,17 @@ footer {
   background-color: darkslategrey;
 }
 footer .footer-buttons {
-  min-width: 700px;
+  min-width: 100%;
   display: flex;
   justify-content: space-evenly;
   padding: 10px;
 }
 footer .footer-buttons a {
   text-decoration: none;
-  font-size: 28px;
-  width: 60px;
-  height: 60px;
-  line-height: 60px;
+  font-size: 3rem;
+  width: 6rem;
+  height: 6rem;
+  line-height: 6rem;
   text-align: center;
   background: #52314a;
   color: whitesmoke;
@@ -272,6 +272,8 @@ footer .footer-buttons a {
 footer .footer-buttons a:hover {
   transform: scale(1.2);
 }
+
+
 
 /*queries del header*/
 @media (min-width: 1000px) {

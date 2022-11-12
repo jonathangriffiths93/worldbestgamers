@@ -1,6 +1,6 @@
-@mixin cajacards{
+@mixin cajacards ($fondocajas, $margin: 20px) {
     background-color: $fondocajas;
-    margin: 20px;
+    margin: $margin;
     padding: $paddingcards;
     box-sizing: border-box;
     box-shadow: $sombradebajo;
@@ -8,7 +8,7 @@
     overflow: auto;
 }
 .card {
-    @include: "cajacards";
+    @include cajacards;
     
 
     &__title {
@@ -24,12 +24,26 @@
 
     &__videos {
 
-        @include: "cajacards(margin: 10px;)";
-        
+        @include cajacards;
+        margin: 20px;
         
     }
 }
 
 .card-twitch {
-    @include: "cajacards(margin: 10px; padding: 40px; height: 50rem;)";
+    @include cajacards($margin);
+    height: 50rem;
+}
+.datoscard {
+    list-style: none;
+    display: inline;
+}
+.recomendado {
+    font-size: x-large;
+    color: rgb(8, 8, 130);
+}
+
+.norecomendado {
+    font-size: x-large;
+    color: rgb(149, 3, 3);
 }
