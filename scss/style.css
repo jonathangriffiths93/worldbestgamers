@@ -282,15 +282,15 @@ footer {
 footer .footer-buttons {
   min-width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   padding: 10px;
 }
 footer .footer-buttons a {
   text-decoration: none;
-  font-size: 28rem;
-  width: 60rem;
-  height: 60rem;
-  line-height: 60rem;
+  font-size: 2rem;
+  width: 4rem;
+  height: 4rem;
+  line-height: 4rem;
   text-align: center;
   background: #52314a;
   color: whitesmoke;
