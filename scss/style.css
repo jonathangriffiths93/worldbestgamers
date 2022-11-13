@@ -193,9 +193,7 @@ main ul.breadcrumb li + li:before {
   padding: 20px 10px 30px 10px;
   box-sizing: border-box;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
+  height: 100%;
   overflow: auto;
 }
 .card__title {
@@ -208,23 +206,54 @@ main ul.breadcrumb li + li:before {
 }
 .card__videos {
   background-color: rgb(45, 67, 67);
-  margin: 10px;
+  margin: 20px;
   padding: 20px 10px 30px 10px;
   box-sizing: border-box;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  height: 100%;
   overflow: auto;
+  margin: 20px;
 }
 
 .card-twitch {
   background-color: rgb(45, 67, 67);
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
   margin: 20px;
-  padding: 40px;
+  padding: 20px 10px 30px 10px;
   box-sizing: border-box;
-  height: 50rem;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  height: 100%;
   overflow: auto;
+  height: 50rem;
+}
+
+.datoscard {
+  list-style: none;
+  display: inline;
+}
+
+.recomendado {
+  font-size: x-large;
+  color: rgb(8, 8, 130);
+}
+
+.norecomendado {
+  font-size: x-large;
+  color: rgb(149, 3, 3);
+}
+
+.video-responsive {
+  overflow: hidden;
+  padding-bottom: 400px; /* Adecua este valor para controlar la altura del video */
+  position: relative;
+  height: 0;
+}
+
+.video-responsive iframe {
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
 }
 
 .carousel-size {
@@ -253,15 +282,15 @@ footer {
 footer .footer-buttons {
   min-width: 100%;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   padding: 10px;
 }
 footer .footer-buttons a {
   text-decoration: none;
-  font-size: 3rem;
-  width: 6rem;
-  height: 6rem;
-  line-height: 6rem;
+  font-size: 28rem;
+  width: 60rem;
+  height: 60rem;
+  line-height: 60rem;
   text-align: center;
   background: #52314a;
   color: whitesmoke;
@@ -272,8 +301,6 @@ footer .footer-buttons a {
 footer .footer-buttons a:hover {
   transform: scale(1.2);
 }
-
-
 
 /*queries del header*/
 @media (min-width: 1000px) {

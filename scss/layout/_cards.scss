@@ -1,14 +1,14 @@
-@mixin cajacards ($fondocajas, $margin: 20px) {
+@mixin cajacards ($margin: 20px) {
     background-color: $fondocajas;
     margin: $margin;
     padding: $paddingcards;
     box-sizing: border-box;
     box-shadow: $sombradebajo;
-    height: fit-content;
+    height: 100%;
     overflow: auto;
 }
 .card {
-    @include cajacards;
+    @include cajacards (20px);
     
 
     &__title {
@@ -31,7 +31,7 @@
 }
 
 .card-twitch {
-    @include cajacards($margin);
+    @include cajacards(20px);
     height: 50rem;
 }
 .datoscard {
@@ -46,4 +46,18 @@
 .norecomendado {
     font-size: x-large;
     color: rgb(149, 3, 3);
+}
+
+.video-responsive {
+    overflow:hidden;
+    padding-bottom:400px; /* Adecua este valor para controlar la altura del video */
+    position:relative;
+    height:0;
+}
+.video-responsive iframe{
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;
 }
